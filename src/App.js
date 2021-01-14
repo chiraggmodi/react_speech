@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import './App.css';
 import Dictionary from './Components/Dictionary';
 
@@ -57,7 +58,6 @@ function App() {
       setSearchTerm(transcript);
       setListening(false);
 
-
       recognition.onerror = event => console.log(event.error)
       // readOutLoud(transcript);
     }
@@ -65,11 +65,11 @@ function App() {
   } // handleListening
 
   return (
-    <div className="App">
-      {isListening ? <p>Listening...</p> : ''}
-      <h3 onClick={() => { setListening(prestate => !prestate) }}> Start Talk </h3>
-      <p>{searchTerm}</p>
+    <div className="speechRecognization">
 
+      <h3 onClick={() => { setListening(prestate => !prestate) }}>Click here and then Speak word or phrase... </h3>
+      
+      {isListening ? <h5>Speak now! we are listening...</h5> : ''}
       <Dictionary searchTerm={searchTerm} />
     </div>
   );
