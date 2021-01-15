@@ -22,12 +22,7 @@
     "socket.io-client": "^2.3.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "react": "react-scripts start",
-    "build": "react-scripts build",
-    "test:client": "react-scripts test --env=jsdom --watchAll=false --coverage",
-    "test:server": "NODE_ENV=dev mocha --recursive ./test/config.js ./test --exit",
-    "eject": "react-scripts eject"
+    "start": "node server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
