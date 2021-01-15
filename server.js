@@ -7,7 +7,7 @@ let DEEPSPEECH_MODEL = __dirname + '/deepspeech-0.9.3-models'; // path to deepsp
 
 let SILENCE_THRESHOLD = 200; // how many milliseconds of inactivity before processing the audio
 
-const SERVER_PORT = 4000; // websocket server port
+const SERVER_PORT = process.env.PORT || 3000; // websocket server port
 
 // const VAD_MODE = VAD.Mode.NORMAL;
 // const VAD_MODE = VAD.Mode.LOW_BITRATE;
@@ -218,7 +218,7 @@ io.on('connection', function(socket) {
 	});
 });
 
-app.listen(SERVER_PORT, 'localhost', () => {
+app.listen(SERVER_PORT, () => {
 	console.log('Socket server listening on:', SERVER_PORT);
 });
 
