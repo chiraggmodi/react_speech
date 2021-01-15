@@ -1,5 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+/deepspeech-0.6.0-models
+
 # dependencies
 /node_modules
 /.pnp
@@ -21,3 +23,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
+
+deepspeech-0.9.3-models.pbmm
+deepspeech-0.9.3-models.scorer
