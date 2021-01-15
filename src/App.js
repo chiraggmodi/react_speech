@@ -20,7 +20,7 @@ class App extends Component {
 	componentDidMount() {
 		let recognitionCount = 0;
 
-		this.socket = io.connect('http://localhost:4000', {});
+		this.socket = io.connect('http://localhost:5000', {});
 
 		this.socket.on('connect', () => {
 			console.log('socket connected');
