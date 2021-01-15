@@ -23,8 +23,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
 yarn.lock
 
-deepspeech-0.9.3-models.pbmm
-deepspeech-0.9.3-models.scorer
+# deepspeech-0.9.3-models.pbmm
+# deepspeech-0.9.3-models.scorer
