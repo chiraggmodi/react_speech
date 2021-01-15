@@ -1,7 +1,7 @@
 {
   "name": "web-microphone-websocket",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "main": "server.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -22,8 +22,17 @@
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0"
   },
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "react": "react-scripts start",
+    "build": "react-scripts build",
+    "heroku-postbuild": "node server.js", 
+    "test:client": "react-scripts test --env=jsdom --watchAll=false --coverage",
+    "test:server": "NODE_ENV=dev mocha --recursive ./test/config.js ./test --exit",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
