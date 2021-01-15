@@ -1,8 +1,15 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('Renders the start recording button', () => {
+  const { getByText } = render(<App />);
+  const startButton = getByText(/Start Recording/);
+  expect(startButton).toBeInTheDocument();
+});
+
+test('Renders the stop recording button', () => {
+  const { getByText } = render(<App />);
+  const stopButton = getByText(/Stop Recording/);
+  expect(stopButton).toBeInTheDocument();
 });
