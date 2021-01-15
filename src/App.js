@@ -37,7 +37,6 @@ function App() {
 
   const handleListen = () => {
     if (isListening) {
-
       recognition.start();
 
     } else {
@@ -57,7 +56,6 @@ function App() {
       readOutLoud(transcript);
       setSearchTerm(transcript);
       setListening(false);
-
       recognition.onerror = event => console.log(event.error)
       // readOutLoud(transcript);
     }
