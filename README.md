@@ -1,13 +1,12 @@
-# Web Microphone Websocket
+# React Speech Recognition
 
 This is an example of a ReactJS web application streaming microphone audio from the browser
 to a NodeJS server and transmitting the DeepSpeech results back to the browser.
 
-#### Download the pre-trained model (1.8GB):
+#### Speak any word:
 
 ```
-wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.pbmm
-wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.scorer
+you can speak any word and the DeepSpeech API will deact that word and find the meaning of that word from the Dictionary
 ```
 
 #### Install:
